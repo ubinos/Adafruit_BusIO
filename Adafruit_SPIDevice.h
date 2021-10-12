@@ -54,7 +54,7 @@ typedef uint32_t BusIO_PortMask;
     !defined(ARDUINO_ARCH_MBED) && !defined(ARDUINO_ARCH_RP2040)
 typedef volatile uint32_t BusIO_PortReg;
 typedef uint32_t BusIO_PortMask;
-#if not defined(__ASR6501__)
+#if not defined(__ASR6501__) && not defined(ADAFRUIT_BUSIO_NOT_USE_FAST_PINIO)
 #define BUSIO_USE_FAST_PINIO
 #endif
 
